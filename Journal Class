@@ -1,0 +1,11 @@
+public void SearchEntries(string keyword)
+{
+    foreach (var entry in entries)
+    {
+        if (entry.Prompt.Contains(keyword, StringComparison.OrdinalIgnoreCase) ||
+            entry.Response.Contains(keyword, StringComparison.OrdinalIgnoreCase))
+        {
+            Console.WriteLine(entry);
+        }
+    }
+}
